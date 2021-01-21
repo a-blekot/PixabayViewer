@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LoginFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.pixabayviewer.view.ui.login.LoginFragment"
+        android:label="@string/login_fragment_label"
+        tools:layout="@layout/login_fragment">
+
+        <action
+            android:id="@+id/action_Login_to_Home"
+            app:destination="@id/HomeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_Login_to_Register"
+            app:destination="@id/RegisterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/RegisterFragment"
+        android:name="com.example.pixabayviewer.view.ui.register.RegisterFragment"
+        android:label="@string/register_fragment_label"
+        tools:layout="@layout/register_fragment"></fragment>
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.pixabayviewer.view.ui.home.HomeFragment"
+        android:label="@string/home_fragment_label"
+        tools:layout="@layout/home_fragment">
+
+        <action
+            android:id="@+id/action_Home_to_ImageDetail"
+            app:destination="@id/ImageDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ImageDetailFragment"
+        android:name="com.example.pixabayviewer.view.ui.detail.ImageDetailFragment"
+        android:label="@string/image_detail_fragment_label"
+        tools:layout="@layout/image_detail_fragment">
+        <argument
+            android:name="image_id"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+</navigation>

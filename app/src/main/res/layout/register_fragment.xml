@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/emailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/email_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.301" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/gap_normal"
+        android:layout_marginEnd="@dimen/gap_normal"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBaseline_toBaselineOf="@id/emailTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/emailTitle"
+        tools:text="@string/email_hint" />
+
+    <TextView
+        android:id="@+id/emailNotification"
+        android:layout_width="0dp"
+        style="@style/NotificationText"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/gap_normal"
+        android:paddingStart="@dimen/gap_normal"
+        android:paddingEnd="@dimen/gap_normal"
+        android:text="@string/email_notification"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/email"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/passwordTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/password_title"
+        app:layout_constraintBaseline_toBaselineOf="@id/password"
+        app:layout_constraintEnd_toEndOf="@id/emailTitle"
+        app:layout_constraintVertical_bias="0.301" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/gap_normal"
+        android:layout_marginTop="@dimen/gap_normal"
+        android:layout_marginEnd="@dimen/gap_normal"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/passwordTitle"
+        app:layout_constraintTop_toBottomOf="@id/emailNotification"
+        tools:text="123qweasdzxc" />
+
+    <TextView
+        android:id="@+id/passwordNotification"
+        android:layout_width="0dp"
+        style="@style/NotificationText"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/gap_normal"
+        android:paddingEnd="@dimen/gap_normal"
+        android:text="@string/password_notification"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/password"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/ageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/age_title"
+        app:layout_constraintBaseline_toBaselineOf="@id/age"
+        app:layout_constraintEnd_toEndOf="@id/emailTitle" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/gap_normal"
+        android:layout_marginTop="@dimen/gap_normal"
+        android:layout_marginEnd="@dimen/gap_normal"
+        android:inputType="number"
+        android:maxLength="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/ageTitle"
+        app:layout_constraintTop_toBottomOf="@id/passwordNotification"
+        tools:text="31" />
+
+    <TextView
+        android:id="@+id/ageNotification"
+        style="@style/NotificationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/gap_normal"
+        android:paddingEnd="@dimen/gap_big"
+        android:text="@string/age_notification"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@id/age"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gap_huge"
+        android:layout_marginEnd="@dimen/gap_huge"
+        android:text="@string/register_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/age" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
